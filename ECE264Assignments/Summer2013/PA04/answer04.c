@@ -110,7 +110,7 @@ int SparseArray_getMin ( SparseNode * array )
 {
   if(array == NULL)
   {
-   printf("            "); 
+   printf("Error.  Does not meet preconditions."); 
   }
       
   if(array -> left == NULL)
@@ -123,11 +123,11 @@ int SparseArray_getMin ( SparseNode * array )
 
 /* Retrieve the largest index in the sparse array. 
  */
-int SparseArray_getMax ( SparseNode * array )
+int SparseArray_getMax(SparseNode * array)
 {
   if(array == NULL)
   {
-    printf("     ");
+    printf("Error.  Does not meet preconditions.");
   }
   
   if(array -> right == NULL)
@@ -236,6 +236,7 @@ SparseNode * SparseArray_remove (SparseNode * array, int index)
   
   array -> index = successor -> index;
   successor -> index = index;
+  array -> value = successor -> value;
   
   array -> right = SparseArray_remove(array -> right, index);
   
