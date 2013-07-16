@@ -1,0 +1,6 @@
+weight = 20, label = Computer
+weight = 11, label = Monitor
+weight = 20, label = Computer
+weight = 31, label = ComputerMonitor
+weight = 11, label = Monitor
+weight = 20, label = Computer
